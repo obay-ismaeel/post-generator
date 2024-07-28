@@ -1,0 +1,8 @@
+you be given a script of a YouTube video.
+I want you to generate a blog with the following constraints in mind:
+
+the blog contains an abstract of the video or a glimpse of its content.
+the blog should follow blog writing best practices and be appealing and attractive to catch users' attention.
+
+your output should be a JSON exactly like this:
+{ title:"[THE GENERATED TITLE]", post: "[THE GENERATED BLOG]" }
