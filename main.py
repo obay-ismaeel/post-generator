@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from llama_service import CreatePost
+from llama_service import CreatePost, CreateTitle
 import whisper
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
@@ -8,27 +8,36 @@ from pathlib import Path
 
 app = FastAPI()
 
-model = whisper.load_model("base")
-
 class Item(BaseModel):
     script: str
     link: str
 
 @app.post('/api/blog')
 async def generate_linkedin(item:Item):
-    return await CreatePost(item.script, item.link, "blog")
+    blog = await CreatePost(item.script, item.link, "blog")
+    title = await CreateTitle(item.script)
+
+    return {"title": title, "post": blog}
 
 @app.post('/api/linkedin')
 async def generate_linkedin(item:Item):
-    return await CreatePost(item.script, item.link, "linkedin")
+    post = await CreatePost(item.script, item.link, "linkedin")
+
+    return {"post": post}
 
 @app.post('/api/twitter')
 async def generate_linkedin(item:Item):
-    return await CreatePost(item.script, item.link, "twitter")
+    post = await CreatePost(item.script, item.link, "twitter")
+
+    return {"post": post}
 
 @app.post('/api/facebook')
 async def generate_linkedin(item:Item):
-    return await CreatePost(item.script, item.link, "facebook")
+    post = await CreatePost(item.script, item.link, "facebook")
+
+    return {"post": post}
+
+model = whisper.load_model("base")
 
 @app.post("/api/whisper")
 async def get_transcribe(file: UploadFile = File(...)):

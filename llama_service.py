@@ -1,17 +1,18 @@
 from fastapi import HTTPException
-from groq import Groq
+from groq import AsyncGroq
 from dotenv import load_dotenv
 import os
 import json
 
 load_dotenv()
 
-client = Groq(
+client = AsyncGroq(
     api_key = os.getenv('API_KEY')
 )
 
 async def CreatePost(script:str, link:str, type:str):
-    completion = client.chat.completions.create(
+
+    stream = await client.chat.completions.create(
         model="llama-3.1-70b-versatile",
         messages=[
             {
@@ -24,20 +25,46 @@ async def CreatePost(script:str, link:str, type:str):
             }
         ],
         temperature=1,
-        max_tokens=4096,
+        max_tokens=6660,
         top_p=1,
-        stream=False,
-        response_format={"type": "json_object"},
+        stream=True,
         stop=None,
     )
 
-    response_content = completion.choices[0].message.content
-    
-    try:
-        # Try to parse the response content as JSON
-        return json.loads(response_content)
-    except json.JSONDecodeError:
-        raise HTTPException(status_code=500, detail="Invalid JSON response from the model")
+    response = ""
+    async for chunk in stream:
+        if chunk.choices[0].delta.content is not None:
+            response += chunk.choices[0].delta.content
+
+    return response
+
+async def CreateTitle(script:str):
+
+    stream = await client.chat.completions.create(
+        model="llama-3.1-70b-versatile",
+        messages=[
+            {
+                "role": "system",
+                "content": read_file(f"rules/title.txt")
+            },
+            {
+                "role": "user",
+                "content": script
+            }
+        ],
+        temperature=1,
+        max_tokens=6660,
+        top_p=1,
+        stream=True,
+        stop=None,
+    )
+
+    response = ""
+    async for chunk in stream:
+        if chunk.choices[0].delta.content is not None:
+            response += chunk.choices[0].delta.content
+
+    return response
 
 def read_file(file_path: str):
     try:
