@@ -17,7 +17,7 @@ async def CreatePost(script:str, link:str, type:str):
         messages=[
             {
                 "role": "system",
-                "content": read_file(f"rules/{type}.txt")
+                "content": read_file(f"prompts/{type}.txt")
             },
             {
                 "role": "user",
@@ -38,14 +38,14 @@ async def CreatePost(script:str, link:str, type:str):
 
     return response
 
-async def CreateTitle(script:str):
+async def CreateTitle(script:str, type:str):
 
     stream = await client.chat.completions.create(
         model="llama-3.1-70b-versatile",
         messages=[
             {
                 "role": "system",
-                "content": read_file(f"rules/title.txt")
+                "content": read_file(f"prompts/{type}_title.txt")
             },
             {
                 "role": "user",
