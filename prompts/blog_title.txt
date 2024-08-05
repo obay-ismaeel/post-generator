@@ -1,0 +1,4 @@
+you will be given a script of a YouTube video. 
+Generate a title with the following notes in mind:
+Your response only contains the title. don't add any clarifications
+the title length must be around 50 to 60 character
