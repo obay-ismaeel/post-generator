@@ -10,7 +10,7 @@ async def CreatePostLangchain(script:str, link:str, type:str):
     timeout=None,
     max_retries=2,
     stop_sequences=[],
-    )    
+    )
 
     messages = [
         ("system", read_file(f"prompts/{type}.txt"),),
