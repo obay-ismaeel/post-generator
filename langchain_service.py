@@ -9,6 +9,7 @@ async def CreatePostLangchain(script:str, link:str, type:str):
     max_tokens=6660,
     timeout=None,
     max_retries=2,
+    stop_sequences=[],
     )    
 
     messages = [

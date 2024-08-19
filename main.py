@@ -14,7 +14,7 @@ class ScriptDto(BaseModel):
     script:str
 
 @app.post('/api/blog')
-async def generate_linkedin(item:Item):
+async def generate_blog(item:Item):
     blog = await CreatePost(item.script, item.link, "blog")
     title = await CreateTitle(item.script, "blog")
 
@@ -27,19 +27,19 @@ async def generate_linkedin(item:Item):
     return {"post": post}
 
 @app.post('/api/twitter')
-async def generate_linkedin(item:Item):
+async def generate_twitter(item:Item):
     post = await CreatePost(item.script, item.link, "twitter")
 
     return {"post": post}
 
 @app.post('/api/facebook')
-async def generate_linkedin(item:Item):
+async def generate_facebook(item:Item):
     post = await CreatePost(item.script, item.link, "facebook")
 
     return {"post": post}
 
 @app.post('/api/title')
-async def generate_linkedin(dto:ScriptDto):
+async def generate_title(dto:ScriptDto):
     title = await CreateTitle(dto.script, "youtube")
 
     return {"title": title}
@@ -70,7 +70,7 @@ async def websocket_endpoint(websocket: WebSocket):
 # @app.post("/api/whisper")
 # async def get_transcribe(file: UploadFile = File(...)):
 #     current_directory = Path.cwd()
-    
+
 #     file_path = f"{current_directory}{file.filename}"
 #     with open(file_path, "wb") as f:
 #         f.write(await file.read())
@@ -85,7 +85,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
 
 @app.post('/api/test')
-async def generate_linkedin(item:Item):
+async def generate_test(item:Item):
     post = await CreatePostLangchain(item.script, item.link, "facebook")
 
     return {"post": post}
