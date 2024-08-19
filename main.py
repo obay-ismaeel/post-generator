@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from llama_service import CreatePost, CreateTitle
+from langchain_service import CreatePostLangchain
 # import whisper
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 
@@ -8,6 +9,9 @@ app = FastAPI()
 class Item(BaseModel):
     script: str
     link: str
+
+class ScriptDto(BaseModel):
+    script:str
 
 @app.post('/api/blog')
 async def generate_linkedin(item:Item):
@@ -34,9 +38,9 @@ async def generate_linkedin(item:Item):
 
     return {"post": post}
 
-@app.post('/api/youtubetitle')
-async def generate_linkedin(item:Item):
-    title = await CreateTitle(item.script, "youtube")
+@app.post('/api/title')
+async def generate_linkedin(dto:ScriptDto):
+    title = await CreateTitle(dto.script, "youtube")
 
     return {"title": title}
 
@@ -78,3 +82,10 @@ async def websocket_endpoint(websocket: WebSocket):
 #     transcription_text = result.get("text", "")
 
 #     return JSONResponse(content={"text": transcription_text})
+
+
+@app.post('/api/test')
+async def generate_linkedin(item:Item):
+    post = await CreatePostLangchain(item.script, item.link, "facebook")
+
+    return {"post": post}

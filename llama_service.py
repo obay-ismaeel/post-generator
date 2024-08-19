@@ -1,13 +1,13 @@
 from fastapi import HTTPException
 from groq import AsyncGroq
 from dotenv import load_dotenv
+from shared import read_file
 import os
-import json
 
 load_dotenv()
 
 client = AsyncGroq(
-    api_key = os.getenv('API_KEY')
+    api_key = os.getenv('GROQ_API_KEY')
 )
 
 async def CreatePost(script:str, link:str, type:str):
@@ -65,13 +65,3 @@ async def CreateTitle(script:str, type:str):
             response += chunk.choices[0].delta.content
 
     return response
-
-def read_file(file_path: str):
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
-        return content
-    except FileNotFoundError:
-        return f"Error: The file at path {file_path} was not found."
-    except IOError as e:
-        return f"Error reading file at path {file_path}: {e}"
