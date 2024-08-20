@@ -1,8 +1,8 @@
 from pydantic import BaseModel
 from llama_service import CreatePost, CreateTitle
 from langchain_service import CreatePostLangchain
-# import whisper
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from whisper_service import get_transcribe
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile
 
 app = FastAPI()
 
@@ -44,6 +44,10 @@ async def generate_title(dto:ScriptDto):
 
     return {"title": title}
 
+@app.post("/api/whisper")
+async def get_transcribe_whisper(file: UploadFile = File(...)):
+    return await get_transcribe(file)
+
 ###
 # websocket
 ###
@@ -65,23 +69,6 @@ async def websocket_endpoint(websocket: WebSocket):
         await websocket.close(code=1011, reason=f"Server error: {e}")
         print(f"Error: {e}")
 
-# model = whisper.load_model("base")
-
-# @app.post("/api/whisper")
-# async def get_transcribe(file: UploadFile = File(...)):
-#     current_directory = Path.cwd()
-
-#     file_path = f"{current_directory}{file.filename}"
-#     with open(file_path, "wb") as f:
-#         f.write(await file.read())
-
-#     result = model.transcribe(file_path)
-
-#     os.remove(file_path)
-
-#     transcription_text = result.get("text", "")
-
-#     return JSONResponse(content={"text": transcription_text})
 
 
 @app.post('/api/test')
