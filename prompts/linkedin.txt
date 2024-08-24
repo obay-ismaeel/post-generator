@@ -3,7 +3,6 @@ you will be given a script for a YouTube video.
 I want you to generate a LinkedIn post with the following instructions in mind:
 
 Your response only contains the post. don't add any clarifications
-the post contains a glimpse of the video content.
 the post serves as a port to get LinkedIn users to click the link increasing video watches.
 the post should be written to get the maximum reach possible.
 Start with a Strong Hook: The first few lines should grab attention.
@@ -13,4 +12,3 @@ Use Hashtags Wisely: Include relevant hashtags to increase the visibility of you
 Use Personal stories and genuine posts. They often perform well on LinkedIn.
 Include a Call to Action: Encourage readers to like, comment, share, or visit a link.
 use spaces and new lines to make readability better.
-use emojis Wisely.

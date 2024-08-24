@@ -1,18 +1,17 @@
-from typing import Literal
+from typing import Literal, Optional
 from pydantic import BaseModel, Field
 
 class PostOptionsRequest(BaseModel):
     platform: Literal['linkedin', 'facebook', 'twitter', 'blog']
-    point_of_view: str = None
-    primary_key_phrase: str = None
-    post_format: Literal[]
-    use_emojis: bool = None
-    additional_prompt: str = None
-    word_count: int = None
-    
+    post_format: Literal['auto', 'summary', 'promotional'] = 'auto'
+    point_of_view: Optional[Literal['auto', 'FirstPersonSingular', 'FirstPersonPlural', 'SecondPerson', 'ThirdPerson']] = 'auto'
+    use_emojis: Optional[bool] = True
+    additional_prompt: Optional[str] = None
+    word_count: Optional[int] = None
+
 class QueryDto(BaseModel):
     script: str
-    link: str
+    link: Optional[str] = None
     options: PostOptionsRequest
 
 class Item(BaseModel):

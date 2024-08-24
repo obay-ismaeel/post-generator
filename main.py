@@ -4,10 +4,10 @@ from dtos import Item, QueryDto, ScriptDto
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 import uvicorn
-from langchain_service import generate_post, generate_title
+from langchain_service import generate_post, generate_title, semantic_search
 from media_service import extract_top_frames_from_video
 from rating_service import analyze_post
-from whisper_service import get_transcribe
+# from whisper_service import get_transcribe
 from fastapi import FastAPI, Form, HTTPException, WebSocket, WebSocketDisconnect, File, UploadFile
 import logging
 
@@ -24,24 +24,20 @@ async def generate(dto:QueryDto):
     
     title = None
 
-    if(dto.platform == "blog"):
+    if(dto.options.platform == "blog"):
         title = await generate_title(dto.script, "blog")
     
     return { "post": post, "title": title, "rating": rating }
 
 @app.post('/api/title')
-async def generate_title(dto:ScriptDto):
+async def get_title(dto:ScriptDto):
     title = await generate_title(dto.script, "youtube")
 
     return {"title": title}
 
-@app.post("/api/whisper")
-async def get_transcribe_whisper(file: UploadFile = File(...)):
-    return await get_transcribe(file)
-
-###
-# websocket
-###
+# @app.post("/api/whisper")
+# async def get_transcribe_whisper(file: UploadFile = File(...)):
+#     return await get_transcribe(file)
 
 @app.post('/api/upload-video')
 async def upload_video(video_file: UploadFile = File(...)):
