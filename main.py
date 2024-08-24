@@ -81,26 +81,35 @@ async def search():
 
 
 @app.post('/api/blog')
-async def generate_blog(script: str = Form(...), link: str = Form(...), video_file: UploadFile = File(...)):
+async def generate_blog(script: str = Form(...), link: str = Form(...), video_file: UploadFile = File(None)):
     unique_id = str(uuid.uuid4())
-    video_path = f"temp_video{unique_id}.mp4"
 
-    with open(video_path, "wb") as f:
-        while chunk := await video_file.read(1024):
-            f.write(chunk)
+    if video_file is not None:
+        video_path = f"temp_video{unique_id}.mp4"
+        
+        with open(video_path, "wb") as f:
+            while chunk := await video_file.read(1024):
+                f.write(chunk)
+        
+        top_frame_paths = await extract_top_frames_from_video(video_path)
 
+        # Generate URLs for the extracted frames
+        base_url = "http://127.0.0.1:8000/output/"
+        top_frame_urls = [base_url + os.path.basename(path) for path in top_frame_paths]
+
+        # Clean up: remove the video file after processing
+        if os.path.exists(video_path):
+            logging.log(1, f"Video '{video_path}' has been successfully deleted.")
+            os.remove(video_path)
+    else:
+        top_frame_urls = []  # No video provided, so no frames to return
+
+    # Create the blog post and other related data
     blog = await CreatePost(script, link, "blog")
     title = await CreateTitle(script, "blog")
     rate = await analyze_post(blog)
-    top_frame_paths = await extract_top_frames_from_video(video_path)
 
-    base_url = "http://127.0.0.1:8000/output/"
-    top_frame_urls = [base_url + os.path.basename(path) for path in top_frame_paths]
-
-    if os.path.exists(video_path):
-        logging.log(1, f"Video '{video_path}' has been successfully deleted.")
-        os.remove(video_path)
-
+    # Return the response
     return JSONResponse(content={"title": title, "post": blog, "rate": rate, "images": top_frame_urls})
     # return {"title": title, "post": blog, "rate": rate, "images": top_frame_urls}
 
@@ -108,20 +117,20 @@ async def generate_blog(script: str = Form(...), link: str = Form(...), video_fi
 @app.delete('/api/image')
 async def delete_image(name: str = Form(...)):
     image_directory = os.path.join(os.getcwd(), "output")
-
     image_path = os.path.join(image_directory, name)
 
-    if os.path.exists(image_path):
-        os.remove(image_path)
+    try:
+        if os.path.exists(image_path):
+            os.remove(image_path)
+            logging.log(1, f"Image '{name}' has been successfully deleted.")
+            return JSONResponse(content={"message": f"Image '{name}' has been successfully deleted."})
+        else:
+            logging.error(f"Image '{name}' not found.")
+            raise HTTPException(status_code=404, detail=f"Image '{name}' not found.")
 
-        logging.log(1, f"Image '{name}' has been successfully deleted.")
-
-        return JSONResponse(content={"message": f"Image '{name}' has been successfully deleted."}, status_code=204)
-        # return {"message": f"Image '{name}' has been successfully deleted."}
-
-    else:
-        logging.error(1, f"Image '{name}' not found.")
-        raise HTTPException(status_code=404, detail=f"Image '{name}' not found.")
+    except Exception as e:
+        logging.error(f"An error occurred while deleting the image '{name}': {str(e)}")
+        raise HTTPException(status_code=500, detail=f"An error occurred while deleting the image '{name}': {str(e)}")
 
 
 # uvicorn.run(app, host="127.0.0.1", port=8000)
