@@ -35,7 +35,7 @@ def initialize_database():
     if db is None:  # Check if the database is already initialized
         if os.path.isfile("chroma.sqlite3"):
             print("Loading DB...")
-            db = Chroma(collection_name='chroma', persist_directory="./", embedding_function=CohereEmbeddings(model='embed-english-v3.0'))
+            db = Chroma(collection_name='chroma', persist_directory="./", embedding_function=CohereEmbeddings(model='embed-english-v3.0', client='Obay', async_client='Eyas'))
             return
 
         directory_path = "./documents"
@@ -55,12 +55,14 @@ def initialize_database():
 
             all_documents.extend(splits)
 
-        db = Chroma.from_documents(persist_directory="./db/" ,documents=all_documents, embedding=CohereEmbeddings(model='embed-english-v3.0'))
+        db = Chroma.from_documents(persist_directory="./db/" ,documents=all_documents, embedding=CohereEmbeddings(model='embed-english-v3.0', client='Obay', async_client='Eyas'))
         
         print("Database initialized successfully!")
 
 def semantic_search(query:str):
     initialize_database()
+    if db is None:
+        raise ValueError("Database not initialized")
 
     retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": 6})
 
