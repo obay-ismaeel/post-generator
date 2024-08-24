@@ -264,12 +264,13 @@ class PostRating(KnowledgeEngine):
     def get_feedback(self):
         return '\n'.join(self.feedback)
 
-def analyze_post(post_text):
+async def analyze_post(post_text):
     engine = PostRating()
     engine.reset()
     engine.declare(Post(text=post_text))
     engine.run()
-    return (engine.score, engine.get_feedback())
+    # return (engine.score, engine.get_feedback())
+    return engine.score
 
 
 # Example usage
@@ -290,5 +291,5 @@ if __name__ == "__main__":
     #NewBeginnings #CareerGrowth #Excited #Grateful
     '''
     result = analyze_post(post_text)
-    print(result)
+    # print(result)
 

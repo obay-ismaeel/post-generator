@@ -1,0 +1,428 @@
+Best Practices for Video-Based Branding
+
+n-site residency recruitment interviews
+have been considered the ‘‘gold standard’’
+for allowing programs and applicants to
+assess mutual compatibility and fit.1–3 For the 2020–
+2021 interview season, however, the Association of
+American of Medical Colleges (AAMC) is strongly
+encouraging graduate medical education (GME)
+programs to use virtual interviews to mitigate the
+risk of COVID-19.4 On-site interviews contribute
+significantly to an applicant’s perspectives of a
+training program by providing opportunities to
+interact with residents and program leadership, to
+experience program location and work environment,
+and to develop a sense of a program ‘‘feel’’ and how
+they ‘‘fit’’ into that program.1 In lieu of traditional
+interviews, programs must reimagine how they
+communicate information to applicants, describe
+culture, and authentically portray the program.
+Videos represent a means of consistent information
+delivery; however, their design must be optimized to
+ensure a strong user experience. We review key
+concepts and best practices for the use of video
+during virtual residency and fellowship recruitment.
+
+Key Concepts in Branding
+Residency programs have already developed a unique
+brand, whether intentionally or not. The term brand
+is defined as ‘‘a sign certifying the origin of a product
+or service and differentiating it from the competition.’’5 Although health systems and residency programs have previously devoted efforts to branding,6,7
+virtual recruitment will necessitate additional attention to it (FIGURE). Brand positioning should provide
+consistent messages in a clear and appealing format,
+including a modern-appearing and fully functional
+program website, a strong social media presence, and
+online video content that shares a compelling view of
+the program. Video-based branding is the use of
+videos for brand positioning and is the focus of this
+article.
+DOI: http://dx.doi.org/10.4300/JGME-D-20-00750.1
+
+6
+
+Journal of Graduate Medical Education, February 2021
+
+Historically, programs have used several platforms to
+display a brand image, including websites, social
+media sites such as Twitter, and online communities
+such as Reddit.8 Programs have also disseminated
+videos via these forums. Programs have then used an
+in-person interview to provide a comprehensive brand
+experience. As residency programs must now fully
+provide the comprehensive brand experience virtually,
+they must consider key principles for developing
+recruitment videos.
+Limit Video Duration: Shorter videos keep an
+audience’s attention.9 Business literature suggested
+that two-thirds of viewers watch videos to completion
+if they are shorter than 1 minute.10 In 2018, the
+average marketing video lasted 4.07 minutes.10 While
+highlighting key aspects of a program likely necessitates videos longer than 1 minute, we recommend
+keeping videos as short as possible, ideally less than 5
+minutes.
+Limit the Scope of the Video: Each video should have
+a clear focus. Comprehensive videos represent significant cognitive load for applicants and risk diluting
+key information. We recommend creating multiple
+short videos to individually highlight program features to give applicants a ‘‘feel’’ for the program.
+Examples include a video demonstrating post-work
+activities of residents or faculty and recorded interviews detailing unique aspects of the curriculum.
+Include Information About Resident Life: Traditional
+interviews include opportunities for applicants to ask
+questions to residents. Responses can significantly
+affect brand image.1–3,11,12 Losing pre-interview
+social events limits applicants’ ability to gather this
+information in a low-stakes setting, but programs can
+provide similar information in video format. Essential
+content may include satisfaction and wellness, cost of
+living, and descriptions of the local area, benefits, and
+community-building initiatives. Videos featuring a
+
+Downloaded from http://meridian.allenpress.com/jgme/article-pdf/13/1/6/3268363/i1949-8357-13-1-6.pdf by guest on 29 July 2024
+
+Charles A. Brown, MD, MPH
+Corlin Jewell, MD
+David A. Haidar, MD
+Zachary Forcade, MD
+
+PERSPECTIVES
+
+Residency Program Branding During Virtual Recruitment Season
+
+variety of resident voices may facilitate an applicant’s optimizes multimedia presentation design and imassessment of their fit.
+proves learning and knowledge retention (TABLE).15,16
+Balance User-Generated and Program Leadership–
+Generated Content: User-generated content is a staple
+of business marketing. Consumers regard the content
+as authentic and trustworthy,13 and are 5 times more
+likely to interact with user-generated content than
+with professional content.14 Examples of user-generated content in residency programs include personal
+anecdotes and testimonials from current residents,
+faculty, and alumni, as well as videos highlighting a
+‘‘day-in-the-life’’ of a resident. These videos can be
+made without the need for professional equipment—
+smartphone videos and pictures often suffice. While
+user-generated content is valuable, we recommend
+balancing it with high-quality program leadership–
+generated content that showcases the curriculum and
+sponsoring institution.
+
+Track and Review Video Analytics: Available data
+includes the number of viewers, devices from which
+the video is viewed, and the time at which viewership
+declines. Video hosting websites such as YouTube
+readily provide these data. Instagram also has a native
+analytics tool that shows audience demographics,
+profile engagement, and which posts are most
+successful. A member of the recruitment team should
+track this data weekly in order to maintain popular
+videos, relocate less trafficked ones, and contribute to
+future brand auditing.17
+
+Augment Video-Based Branding Strategies with
+Social Media:18,19 Social media can be used to drive
+traffic to program videos and increase viewership.
+Not only can videos be featured on program websites
+and social media platforms, such as Twitter and
+Utilize Mayer’s 12 Principles of Multimedia Learn- Instagram, but members of the program can also
+ing: Mayer’s 12 Principles of Multimedia Learning share videos on individual accounts to increase traffic.
+Journal of Graduate Medical Education, February 2021
+
+7
+
+Downloaded from http://meridian.allenpress.com/jgme/article-pdf/13/1/6/3268363/i1949-8357-13-1-6.pdf by guest on 29 July 2024
+
+FIGURE
+
+PERSPECTIVES
+TABLE
+
+Mayer’s 12 Principles of Multimedia Learning
+Principle
+
+Videos for Residency Program Branding
+
+Example
+
+Avoid segments that do not highlight key
+aspects of the program’s brand identity,
+even if visually appealing.
+
+Focusing on fellowship placement when the
+program doesn’t have many graduates
+pursue fellowship.
+
+Signaling
+
+Provide cues to audience prior to showing
+critical elements of the brand identity to
+recapture attention.
+
+Introduce elements using large or boldly
+colored text or modulating tone/volume of
+presenter’s voice.
+
+Redundancy
+
+Avoid redundant text on-screen if voice-over
+narration provides the same material.
+
+Having text cues that replicate what is being
+said.
+
+Spatial and temporal
+contiguity
+
+Present corresponding audio/pictures/clips
+close together within the video.
+
+Use pictures of residents together outside of
+work when speaking about concepts like
+wellness or work-life balance.
+
+Segmenting
+
+Avoid clustering critical information within too
+short a span of video.
+
+A video places multiple program highlights
+within the same minute of the video.
+
+Pretraining
+
+Provide static materials highlighting desired
+aspects of the brand identity near the video
+link.
+
+Place program’s mission statement or letter
+from the program director near video link.
+
+Modality
+
+Use audio voice-over rather than on-screen
+text.
+
+Use high-quality microphone to record voiceover.
+
+Multimedia
+
+Video and audio together are more effective
+than a single modality alone.
+
+Avoid videos with background music and onscreen text only.
+
+Personalization
+
+Use informal language to connect with
+applicants rather than overly technical terms.
+
+Avoid using medical or business jargon during
+video.
+
+Voice
+
+During sections with audio, use an expressive
+human presenter.
+
+Modulate tone and pace to maintain
+audience’s attention.
+
+Image
+
+Presenters during the video do not always
+need to be shown while speaking.
+
+Utilize voice-overs, especially if same individual
+is consistently speaking.
+
+Social media allows programs to directly engage with
+applicants in a dynamic fashion; applicants can ask
+questions via comments or direct messages and
+receive responses from the program. Social media
+accounts can also post videos of residency events,
+resident and faculty achievements, and educational
+content. Social media analytics as mentioned above
+can be used to track engagement with content and
+allow programs to optimize efforts.
+
+Pitfalls of Video-Based Branding
+Video-based branding comes with certain pitfalls.
+
+media training for operators of the social media
+accounts.
+Avoid Overly Produced Videos: Although investing in
+high-quality videos is recommended, overly curated
+videos can jeopardize perceived authenticity.
+Acknowledge that Videos Can’t Completely Replace
+a Typical Interview Experience: Regardless of quality,
+videos miss the subtlety of in-person interactions and
+observations and lack interactivity. However, videobased branding can help fill the void created by virtual
+interviewing by augmenting the brand experience and
+supplementing it once in-person interviews return.
+
+Avoid Trying to Precisely Recreate the In-Person
+Interview: Focusing on traditional aspects of residenFuture Directions
+cy tours, such as visiting the intensive care unit, can
+lead to long, unengaging videos that do not emphasize We anticipate that video-based branding will continue
+to play an important role in recruitment given the
+unique features.
+flexibility and control provided to a program with
+Watch for Unprofessional Content: Social media regard to branding. Videos offer a preliminary glance
+platforms that allow for public and anonymous at a program’s mission and identity and ideally lead to
+commentary present a professionalism challenge.20 interest from compatible applicants. Programs will
+Potential strategies for programs include limiting likely invest significantly to develop videos, which
+access to accounts or disabling comments to prevent should be created with the intent of being used for
+inappropriate posts. Consider providing social multiple years.
+
+8
+
+Journal of Graduate Medical Education, February 2021
+
+Downloaded from http://meridian.allenpress.com/jgme/article-pdf/13/1/6/3268363/i1949-8357-13-1-6.pdf by guest on 29 July 2024
+
+Coherence
+
+PERSPECTIVES
+
+Interviewees are limited in who they meet and
+speak to on in-person interview days. Therefore, in
+future years, videos can be used to expose applicants
+to resident and faculty voices that they may not have
+met in person or those who have like-minded
+interests. This will allow for applicants to develop a
+greater understanding of a program’s brand and
+culture.2,3,11,12
+Further research is needed to determine if applicants value these videos and what, if any, impact
+videos have on recruitment.
+
+Conclusions
+
+References
+1. Shappell E, Schnapp B. The F word: how ‘‘fit’’
+threatens the validity of resident recruitment. J Grad
+Med Educ. 2019;11(6):635–636. doi:10.4300/JGMED-19-00400.1.
+2. Love JN, Howell JM, Hegarty CB, McLaughlin S,
+Coates W, Hopson L, et al. Factors that influence
+medical student selection of an emergency medicine
+residency program: implications for training programs:
+factors that influence student decision-making. Acad
+Emerg Med. 2012;19(4):455–460. doi:10.1111/j.15532712.2012.01323.x.
+3. Deloney LA, Perrot LJ, Lensing SY, Jambhekar K.
+Radiology resident recruitment: a study of the impact of
+web-based information and interview day activities.
+Acad Radiol. 2014;21(7):931–937. doi:10.1016/j.acra.
+2014.03.009.
+4. Association of American Medical Colleges. Virtual
+Interviews: Tips for Program Directors. https://www.
+aamc.org/system/files/2020-05/Virtual_Interview_Tips_
+for_Program_Directors_05142020.pdf. Accessed
+November 28, 2020.
+5. Association of American Medical Colleges. Conducting
+Interviews During the Coronavirus Pandemic. https://
+www.aamc.org/what-we-do/mission-areas/medicaleducation/conducting-interviews-during-coronaviruspandemic. Accessed November 28, 2020.
+6. Shappell E, Shakeri N, Fant A, Branzetti J, Gisondi M,
+Babcock C, et al. Branding and recruitment: a primer
+for residency program leadership. J Grad Med Educ.
+
+Journal of Graduate Medical Education, February 2021
+
+9
+
+Downloaded from http://meridian.allenpress.com/jgme/article-pdf/13/1/6/3268363/i1949-8357-13-1-6.pdf by guest on 29 July 2024
+
+Residency recruitment videos should be designed by
+following key branding principles and production
+best practices. Videos allow applicants to gather vital
+information about a program and determine if a
+program aligns with their desired training experience.
+We encourage residency leaders to use video-based
+branding to promote a robust brand image that
+communicates the unique aspects of their programs to
+well-matched applicants.
+
+2018;10(3):249–252. doi:10.4300/JGME-D-1700602.1.
+7. Elrod JK, Fortenberry JL. Driving brand equity in health
+services organizations: the need for an expanded view of
+branding. BMC Health Serv Res. 2018;18(3 suppl):924.
+doi:10.1186/s12913-018-3679-4.
+8. Chen VW, Hoang D, Garner W. Do websites provide
+what applicants need? Plastic surgery residency
+program websites versus applicant self-reported needs.
+Plast Reconstr Surg Glob Open. 2018;6(10):e1900.
+doi:10.1097/gox.0000000000001900.
+9. Giles RM, Johnson MR, Knight KE, Zammett S,
+Weinman J. Recall of lecture information: a question of
+what, when and where. Med Educ.
+1982;16(5):264–268. doi:10.1111/j.1365-2923.1982.
+tb01262.x.
+10. Vidyard. Video Benchmark Report. https://www.
+vidyard.com/business-video-benchmarks/?
+sfc¼7014O000001ibFr. Accessed November 28, 2020.
+11. Nuthalapaty FS, Jackson JR, Owen J. The influence of
+quality-of-life, academic, and workplace factors on
+residency program selection. Acad Med.
+2004;79(5):417–425. doi:10.1097/00001888200405000-00010.
+12. Phitayakorn R, Macklin EA, Goldsmith J, Weinstein
+DF. Applicants’ self-reported priorities in selecting a
+residency program. J Grad Med Educ.
+2015;7(1):21–26. doi:10.4300/JGME-D-14-00142.1.
+13. Trend. The Ultimate Guide to User Generated Content.
+https://trend.io/blog/user-generated-content-guide.
+Accessed November 28, 2020.
+14. Brook, C. User Generated Content Statistics: UGC VS
+Professional Content. Photoslurp. https://hi.photoslurp.
+com/blog/user-generated-content-statistics/. Accessed
+November 28, 2020.
+15. Mayer RE. Multimedia Learning. 2nd ed. Cambridge,
+UK: Cambridge University Press; 2009. doi:10.1017/
+CBO9780511811678.
+16. Mayer RE. Applying the science of learning to medical
+education: applying the science of learning. Med Educ.
+2010;44(6):543–549. doi:10.1111/j.1365-2923.2010.
+03624.x.
+17. Beier M. Startups’ experimental development of digital
+marketing activities. A case of online-videos. Soc Sci
+Res Network Electr J. 2016:2868449.
+18. Bergstrom, B. 50 Social Media Best Practices Every
+Business Should Follow. CoSchedule Blog. https://
+coschedule.com/blog/social-media-best-practices-forbusiness/. Accessed November 28, 2020.
+19. Del Gigante, M. 10 Social Media Best Practices for
+Small Businesses. MDG Advertising. https://www.
+mdgadvertising.com/marketing-insights/10-socialmedia-best-practices-for-small-businesses/. Published
+June 3, 2019. Accessed November 28, 2020.
+
+PERSPECTIVES
+
+20. Greysen SR, Kind T, Chretien KC. Online
+professionalism and the mirror of social media. J Gen
+Intern Med. 2010;25(11):1227–1229. doi:10.1007/
+s11606-010-1447-1.
+
+Charles A. Brown, MD, MPH, is a Resident, Emergency Medicine
+Residency Program, University of Michigan/Saint Joseph Mercy
+Health System; Corlin Jewell, MD, is a Medical Education Fellow,
+Department of Emergency Medicine, University of Wisconsin;
+David A. Haidar, MD, is a Resident, Emergency Medicine
+Residency Program, University of Michigan/Saint Joseph Mercy
+Health System; Zachary Forcade, MD, is a Resident, University of
+
+Wisconsin; Benjamin H. Schnapp, MD, MEd, is Assistant
+Professor and Associate Residency Program Director, University of
+Wisconsin; Mary R. C. Haas, MD, is Instructor and Assistant
+Residency Program Director, Department of Emergency Medicine,
+University of Michigan Medical School; Laura R. Hopson, MD, is
+Associate Professor and Associate Chair for Education,
+Department of Emergency Medicine, University of Michigan
+Medical School; and Michael Gisondi, MD, is Associate Professor
+and Vice Chair for Education, Department of Emergency
+Medicine, Stanford University.
+Corresponding author: Charles Brown, MD, MPH, University of
+Michigan Medical School, brocharl@med.umich.edu, Twitter:
+@charlesbrown4
+
+Downloaded from http://meridian.allenpress.com/jgme/article-pdf/13/1/6/3268363/i1949-8357-13-1-6.pdf by guest on 29 July 2024
+
+10
+
+Journal of Graduate Medical Education, February 2021
+
