@@ -1,14 +1,22 @@
+from typing import Literal
 from langchain_groq import ChatGroq
 from langchain_community.document_loaders import TextLoader
+from dtos import Item
 from shared import read_file
-from langchain_text_splitters import CharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_cohere import CohereEmbeddings
 import os
+from groq import AsyncGroq
+from dotenv import load_dotenv
 
-async def CreatePostLangchain(script:str, link:str, type:str):
+load_dotenv()
 
+client = AsyncGroq(
+    api_key = os.getenv('GROQ_API_KEY')
+)
+
+async def generate_post(item:Item):
     llm = ChatGroq(
     model="llama-3.1-70b-versatile",
     temperature=1,
@@ -19,7 +27,26 @@ async def CreatePostLangchain(script:str, link:str, type:str):
     )    
 
     messages = [
-        ("system", read_file(f"prompts/{type}.txt"),),
+        ("system", read_file(f"prompts/{item.platform}.txt"),),
+        ("human", item.script),
+    ]
+    
+    ai_msg = llm.invoke(messages)
+    
+    return ai_msg.content
+
+async def generate_title(script:str, type:Literal['blog', 'youtube']):
+    llm = ChatGroq(
+    model="llama-3.1-70b-versatile",
+    temperature=1,
+    max_tokens=5000,
+    timeout=None,
+    max_retries=2,
+    stop_sequences=[],
+    )    
+
+    messages = [
+        ("system", read_file(f"prompts/{type}_title.txt"),),
         ("human", script),
     ]
     
@@ -27,7 +54,6 @@ async def CreatePostLangchain(script:str, link:str, type:str):
     
     return ai_msg.content
 
-db = None
 
 def initialize_database():
     global db
@@ -35,7 +61,7 @@ def initialize_database():
     if db is None:  # Check if the database is already initialized
         if os.path.isfile("chroma.sqlite3"):
             print("Loading DB...")
-            db = Chroma(collection_name='chroma', persist_directory="./", embedding_function=CohereEmbeddings(model='embed-english-v3.0', client='Obay', async_client='Eyas'))
+            db = Chroma(collection_name='chroma', persist_directory="./", embedding_function=CohereEmbeddings(model='embed-english-v3.0', client=None, async_client=None))
             return
 
         directory_path = "./documents"
