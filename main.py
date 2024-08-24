@@ -1,11 +1,12 @@
 import os
 import uuid
+from dtos import Item, ScriptDto
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import uvicorn
 from llama_service import CreatePost, CreateTitle
-from langchain_service import CreatePostLangchain
+from langchain_service import CreatePostLangchain, semantic_search
 from media_service import extract_top_frames_from_video
 from rating_service import analyze_post
 from whisper_service import get_transcribe
@@ -15,21 +16,8 @@ import logging
 app = FastAPI()
 
 # Serve the output directory as static files
+
 app.mount("/output", StaticFiles(directory="output"), name="output")
-
-class Item(BaseModel):
-    script: str
-    link: str
-
-class ScriptDto(BaseModel):
-    script:str
-
-# @app.post('/api/blog')
-# async def generate_blog(item:Item):
-#     blog = await CreatePost(item.script, item.link, "blog")
-#     title = await CreateTitle(item.script, "blog")
-#     rate = await analyze_post(blog)
-#     return {"title": title, "post": blog, 'rate':rate}
 
 @app.post('/api/linkedin')
 async def generate_linkedin(item:Item):
@@ -55,9 +43,9 @@ async def generate_title(dto:ScriptDto):
 
     return {"title": title}
 
-@app.post("/api/whisper")
-async def get_transcribe_whisper(file: UploadFile = File(...)):
-    return await get_transcribe(file)
+# @app.post("/api/whisper")
+# async def get_transcribe_whisper(file: UploadFile = File(...)):
+#     return await get_transcribe(file)
 
 ###
 # websocket
@@ -82,10 +70,14 @@ async def websocket_endpoint(websocket: WebSocket):
 
 
 
-@app.post('/api/test')
+@app.post('/api/langchain')
 async def generate_test(item:Item):
     post = await CreatePostLangchain(item.script, item.link, "facebook")
     return {"post": post}
+
+@app.post('/api/search')
+async def search():
+    return semantic_search("instagram")
 
 
 @app.post('/api/blog')
@@ -132,4 +124,4 @@ async def delete_image(name: str = Form(...)):
         raise HTTPException(status_code=404, detail=f"Image '{name}' not found.")
 
 
-uvicorn.run(app, host="127.0.0.1", port=8000)
+# uvicorn.run(app, host="127.0.0.1", port=8000)
