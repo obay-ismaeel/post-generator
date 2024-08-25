@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 class PostOptionsRequest(BaseModel):
     platform: Literal['linkedin', 'facebook', 'twitter', 'blog']
     post_format: Literal['auto', 'summary', 'promotional'] = 'auto'
-    point_of_view: Optional[Literal['auto', 'FirstPersonSingular', 'FirstPersonPlural', 'SecondPerson', 'ThirdPerson']] = 'auto'
+    point_of_view: Optional[Literal['Auto', 'FirstPersonSingular', 'FirstPersonPlural', 'SecondPerson', 'ThirdPerson']] = 'Auto'
     use_emojis: Optional[bool] = True
     additional_prompt: Optional[str] = None
     word_count: Optional[int] = None

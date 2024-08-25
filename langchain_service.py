@@ -110,7 +110,7 @@ def initialize_database():
 
             all_documents.extend(splits)
 
-        db = Chroma.from_documents(persist_directory="./db/" ,documents=all_documents, embedding=CohereEmbeddings(model='embed-english-v3.0', client='Obay', async_client='Eyas'))
+        db = Chroma.from_documents(persist_directory="./db/" ,documents=all_documents, embedding=CohereEmbeddings(model='embed-english-v3.0', client=None, async_client=None))
         
         print("Database initialized successfully!")
 
